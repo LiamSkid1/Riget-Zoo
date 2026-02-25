@@ -1,0 +1,38 @@
+I'm working on my T Level Digital Production and Development OSP project - a zoo website with user authentication and booking system using Node.js, Express, MongoDB, and vanilla JavaScript.
+
+PROJECT STRUCTURE:
+- Backend: riget-zoo/server.js, riget-zoo/models/ (User.js, HotelBooking.js, Ticket.js)
+- Frontend: riget-zoo/public/ (HTML files), riget-zoo/public/js/ (JavaScript files), riget-zoo/public/css/styles.css
+- Database: MongoDB Atlas
+
+CURRENT STATUS:
+✅ User registration and login system working
+✅ MongoDB connected successfully
+✅ Backend routes for booking zoo tickets and hotel stays (with loyalty points system)
+✅ Zoo ticket booking: users can select multiple ticket types (Adult £25, Child £15, Senior £20, Family £70) - awards 10 points per £1
+✅ Hotel booking: users can select room type, check-in/out dates - awards 20 points per £1
+✅ Booking page shows "Logged in as: [email]" and current loyalty points
+✅ Real-time calculation of totals and points
+
+FILES CREATED/MODIFIED:
+- server.js: has /register, /login, /api/book-zoo, /api/book-hotel, /api/user/:userId routes
+- models/User.js: firstName, lastName, email, password, dateOfBirth, loyaltyPoints, createdAt
+- models/Ticket.js: userId, ticketType, price, visitDate
+- models/HotelBooking.js: userId, roomType, totalPrice, checkIn, checkOut
+- public/js/login.js: handles login/registration forms
+- public/js/profile.js: handles user profile page
+- public/js/booking.js: handles zoo and hotel booking forms with real-time calculations
+- public/booking-page.html: has both zoo ticket and hotel booking forms
+
+TUTORIAL I'M FOLLOWING:
+Parts 1-4 complete. Still need to implement:
+- Part 5: User Dashboard (displaying bookings and loyalty points)
+- Part 6: CRUD operations (cancelling bookings and updating points)
+
+IMPORTANT NOTES:
+- When suggesting fixes, tell me WHERE I went wrong and HOW to correct it (don't just rewrite entire files)
+- I need explanations suitable for T Level documentation
+- Server runs on localhost:3000
+- MongoDB connection string is in .env file
+
+What I need help with: [describe your issue here]

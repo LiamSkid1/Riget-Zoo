@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home | Riget Zoo</title>
+	<link rel="stylesheet" href="css/styles.css">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="main-header">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="assets/images/riget-logo.png" alt="Riget Zoo's Logo" class="header-logo">
+                </a>
+            </div>
+
+            <nav>
+                    <a href="zoo-showcase.html">Zoo</a>
+                    <a href="hotel-showcase.html">Hotel</a>
+                    <a href="educational-visits.html">Educational Visits</a>
+                    <a href="visitor-information.html">Visitor Information</a>
+                    <a href="contact.html">Contact</a>
+            </nav>
+
+        <div class="header-right">
+
+            <div class="header-icon book-now">
+                <a href="booking-page.html">Book Now!</a>
+            </div>
+
+            <div class="header-icon accessability-options">
+                <a href="accessibility.html">
+                    <img src="assets/icons/accessibility-icon.png" alt="Accessibility Options Icon" class="accessability-icon-image">
+                </a>
+            </div>
+
+            <div class="header-icon profile-icon">
+                <a href="user-profile.html">
+                    <img src="assets/icons/user-profile.png" alt="User Profile Icon" class="profile-icon-image">
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <div class="hero-slideshow-container">
+
+            <div class="hero-slides fade">
+                <div class="hero-numbertext">1 / 3</div>
+                <img src="assets/images/hero-images/home-page-slideshow/zoo-entrance-home-page-hero-1.jpg" style="width:100%" alt="Hero Image 1">
+                <div class="hero-caption">
+                    <h1>Welcome to Riget Zoo</h1>
+                    <p>Experience the wild like never before!</p>
+                </div>
+            </div>
+
+            <div class="hero-slides fade">
+                <div class="hero-numbertext">2 / 3</div>
+                <img src="assets/images/hero-images/home-page-slideshow/safari-park-home-page-hero-2.jpg" style="width:100%" alt="Hero Image 2">
+                <div class="hero-caption">
+                    <h1>Discover Our Safari Park</h1>
+                    <p>Get up close with exotic animals in their natural habitats.</p>
+                </div>
+            </div>
+
+            <div class="hero-slides fade">
+                <div class="hero-numbertext">3 / 3</div>
+                <img src="assets/images/hero-images/home-page-slideshow/hotel-home-page-hero-3.jpg" style="width:100%" alt="Hero Image 3">
+                <div class="hero-caption">
+                    <h1>Stay at Our Luxury Hotel</h1>
+                    <p>Relax and unwind after a day of adventure.</p>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="hero-slide-dot" onclick="currentSlide(1)"></span>
+            <span class="hero-slide-dot" onclick="currentSlide(2)"></span>
+            <span class="hero-slide-dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+
+
+        <section class="frequently-used-links-section">
+            <h2 class="section-title">Frequently Used Links</h2>
+            <div class="frequently-used-links">
+                <a href="visitor-information.html">Directions</a>
+                <a href="visitor-information.html">Opening Times</a>
+                <a href="zoo-showcase.html#events-section">Events</a>
+                <a href="hotel-showcase.html">Check In & Out Times</a>
+            </div>
+
+
+        </section>
+
+
+        <section id="what-we-offer-section" class="showcase-section">
+            <h2 class="section-title">What We offer</h2>
+
+            <div class="showcase-section-cards">
+
+                <div class="showcase-section-card">
+                    <img src="assets/images/what-we-offer/safari-park.jpg" alt="Our Safari Park" class="showcase-section-image">
+                    <div class="showcase-card-caption">
+                        <h3 class="what-we-offer-card-title">Safari</h3>
+                    </div>
+                </div>
+
+                <div class="showcase-section-card">
+                    <img src="assets/images/what-we-offer/hotel.jpg" alt="Our Hotel" class="showcase-section-image">
+                    <div class="showcase-card-caption">
+                        <h3 class="what-we-offer-card-title">Hotel</h3>
+                    </div>
+                </div>
+
+                <div class="showcase-section-card">
+                    <img src="assets/images/what-we-offer/educational.jpg" alt="Our Educational Resources" class="showcase-section-image">
+                    <div class="showcase-card-caption">
+                        <h3 class="what-we-offer-card-title">Educational Visits</h3>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+
+
+
+        <section class="home-page-carousel">
+
+            <!-- radios -->
+            <input type="radio" name="carousel-position" id="pos1">
+            <input type="radio" name="carousel-position" id="pos2">
+            <input type="radio" name="carousel-position" id="pos3" checked>
+            <input type="radio" name="carousel-position" id="pos4">
+            <input type="radio" name="carousel-position" id="pos5">
+
+            <!-- arrows -->
+            <label class="arrow left"  for="pos5"></label>
+            <label class="arrow right" for="pos2"></label>
+
+            <label class="arrow left"  for="pos1"></label>
+            <label class="arrow right" for="pos3"></label>
+
+            <label class="arrow left"  for="pos2"></label>
+            <label class="arrow right" for="pos4"></label>
+
+            <label class="arrow left"  for="pos3"></label>
+            <label class="arrow right" for="pos5"></label>
+
+            <label class="arrow left"  for="pos4"></label>
+            <label class="arrow right" for="pos1"></label>
+
+            <!-- carousel -->
+            <main class="carousel">
+                <div class="item"><img src="assets/images/animal-carousel/lion.jpg" alt="Lion"></div>
+                <div class="item"><img src="assets/images/animal-carousel/penguin.jpg" alt="Penguin"></div>
+                <div class="item"><img src="assets/images/animal-carousel/monkey.jpg" alt="Monkey"></div>
+                <div class="item"><img src="assets/images/animal-carousel/zebra.jpg" alt="Zebra"></div>
+                <div class="item"><img src="assets/images/animal-carousel/ant-eater.jpg" alt="Ant Eater"></div>
+            </main>
+
+        </section>
+
+
+
+        <section class="double-caption-showcase-section">
+            <h2 class="section-title">What's On</h2>
+
+            <div class="double-caption-cards">
+
+                <div class="double-caption-card">
+                    <img src="assets/images/zoo-page/events/hawk-event.jpg" alt="Educational Talks" class="double-caption-image">
+                    <div class="double-caption-card-text">
+                        <h3>Educational Talks</h3>
+                        <p>From amazing facts to endangered animals you'll have a blast!</p>
+                    </div>
+                </div>
+
+                <div class="double-caption-card">
+                    <img src="assets/images/zoo-page/events/seal-talk.jpg" alt="Exclusive Showcases" class="double-caption-image">
+                    <div class="double-caption-card-text">
+                        <h3>Exclusive Showcases</h3>
+                        <p>Enjoy exclusive showcases with tricks that will amaze you!</p>
+                    </div>
+                </div>
+
+                <div class="double-caption-card">
+                    <img src="assets/images/zoo-page/events/christmas-zoo.jpg" alt="Seasonal Events" class="double-caption-image">
+                    <div class="double-caption-card-text">
+                        <h3>Seasonal Events</h3>
+                        <p>From spring blooms to winter wonderlands, join our seasonal fun!</p>
+                    </div>
+                </div> 
+            </div>
+
+            <a href="zoo-showcase.html#events-section" class="standard-button">View Upcoming Events</a>
+
+        </section>
+
+
+        <section id="reviews-section" class="review-section">
+
+            <div class="reviews">
+                <div class="card">
+                    <div class="top">
+                    <div class="profile-pic">👤</div>
+                    <div class="name">Belle A</div>
+                    <div class="stars">★★★★★</div>
+                    </div>
+                    <h3>Heading</h3>
+                    <p>Review text from user | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="card">
+                    <div class="top">
+                    <div class="profile-pic">👤</div>
+                    <div class="name">Ciaran S</div>
+                    <div class="stars">★★★★☆</div>
+                    </div>
+                    <h3>Heading</h3>
+                    <p>Review text from user | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="card">
+                    <div class="top">
+                    <div class="profile-pic">👤</div>
+                    <div class="name">Big dezzer</div>
+                    <div class="stars">★★★★☆</div>
+                    </div>
+                    <h3>Heading</h3>
+                    <p>Review text from user | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="card">
+                    <div class="top">
+                    <div class="profile-pic">👤</div>
+                    <div class="name">Jules</div>
+                    <div class="stars">★★★☆☆</div>
+                    </div>
+                    <h3>Heading</h3>
+                    <p>Review text from user | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+        <section>
+            <div class="email-cta-section">
+                <h2 class="section-title">Be the first to receive important updates about the park!</h2>
+                <form action="#" method="post" class="email-signup-form">
+                    <input type="email" name="email" placeholder="Enter your email address" required class="cta-email-input">
+                    <button type="submit" class="submit-email-cta-button">Sign Up</button>
+                </form>
+                <p class="email-privacy-note">We respect your privacy. Your email will not be shared.</p>
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo-section">
+            <a href="index.html">
+            <img src="assets/images/riget-logo.png" alt="Riget Zoo Logo" class="footer-logo">
+            </a>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Zoo</h4>
+                <a href="home.html#what-we-offer-section">Attractions</a>
+                <a href="zoo-showcase.html#events-section">Events</a>
+                <a href="zoo-showcase.html#animals-section">Animals</a>
+                <a href="home.html#reviews-section">Reviews</a>
+            </div>
+            <div class="footer-column">
+                <h4>Educational Visits</h4>
+                <a href="educational-visits.html">Learning Material</a>
+                <a href="educational-visits.html">What's Included</a>
+                <a href="educational-visits.html">Make an enquiry</a>
+                <a href="educational-visits.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Hotel</h4>
+                <a href="hotel-showcase.html">Accommodation Levels</a>
+                <a href="hotel-showcase.html">Check in/out times</a>
+                <a href="hotel-showcase.html">Facilities</a>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <p><strong>Riget Zoo Wildlife Park</strong></p>
+            <p>Evergreen House,</p>
+            <p>Meadow Lane</p>
+            <p>Northwood, Somerset</p>
+            <p>NS3 4AB</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr class="footer-line">
+        <div class="social-icons">
+            <a href="https://youtube.com" target="_blank"><img src="assets/icons/youtube.png" alt="YouTube"></a>
+            <a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="assets/icons/tik-tok.png" alt="TikTok"></a>
+            <a href="https://instagram.com" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+        </div>
+        <p class="copyright">&copy; Copyright. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

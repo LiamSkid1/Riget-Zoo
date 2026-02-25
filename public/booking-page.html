@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Now | Riget Zoo</title>
+	<link rel="stylesheet" href="css/styles.css">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+            <div class="logo">
+                <a href="home.html">
+                    <img src="assets/images/riget-logo.png" alt="Riget Zoo's Logo" class="header-logo">
+                </a>
+            </div>
+
+            <nav>
+                    <a href="zoo-showcase.html">Zoo</a>
+                    <a href="hotel-showcase.html">Hotel</a>
+                    <a href="educational-visits.html">Educational Visits</a>
+                    <a href="visitor-information.html">Visitor Information</a>
+                    <a href="contact.html">Contact</a>
+            </nav>
+
+        <div class="header-right">
+
+            <div class="header-icon book-now">
+                <a href="booking-page.html">Book Now!</a>
+            </div>
+
+            <div class="header-icon accessability-options">
+                <a href="accessibility.html">
+                    <img src="assets/icons/accessibility-icon.png" alt="Accessibility Options Icon" class="accessability-icon-image">
+                </a>
+            </div>
+
+            <div class="header-icon profile-icon">
+                <a href="user-profile.html">
+                    <img src="assets/icons/user-profile.png" alt="User Profile Icon" class="profile-icon-image">
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <hero-section>
+            <div class="booking-page-hero-image-container">
+                <img src="assets/images/hero-images/booking-hero.jpg" style="width:100%" alt="Welcome to the zoo image" class="booking-page-hero-image">
+                <div class="booking-page-hero-caption">
+                    <h1>Book Now!</h1>
+                    <p>We cant wait to see you!</p>
+                </div>
+            </div>
+        </hero-section>
+
+        </hero-section>
+
+
+        <!-- USER INFO DISPLAY -->
+        <section class="user-info-section">
+            <div class="user-info-box">
+                <p>Logged in as: <strong id="userEmailDisplay">Loading...</strong></p>
+                <p>Current Loyalty Points: <strong id="userPointsDisplay">0</strong></p>
+            </div>
+        </section>
+
+
+
+
+        <!-- ZOO TICKET BOOKING SECTION -->
+        <section class="booking-section">
+            <h2 class="section-title">Book Zoo Tickets</h2>
+            
+            <form id="zooBookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="visitDate">Visit Date:</label>
+                    <input type="date" id="visitDate" required>
+                </div>
+
+                <!-- Ticket Selection Grid -->
+                <div class="ticket-selection-grid">
+                    <h3>Select Your Tickets:</h3>
+                    
+                    <div class="ticket-row">
+                        <label>Adult (£25.00)</label>
+                        <input type="number" id="adultQty" min="0" max="10" value="0" class="ticket-quantity">
+                    </div>
+
+                    <div class="ticket-row">
+                        <label>Child (£15.00)</label>
+                        <input type="number" id="childQty" min="0" max="10" value="0" class="ticket-quantity">
+                    </div>
+
+                    <div class="ticket-row">
+                        <label>Senior (£20.00)</label>
+                        <input type="number" id="seniorQty" min="0" max="10" value="0" class="ticket-quantity">
+                    </div>
+
+                    <div class="ticket-row">
+                        <label>Family Pass (£70.00)</label>
+                        <input type="number" id="familyQty" min="0" max="5" value="0" class="ticket-quantity">
+                    </div>
+                </div>
+
+                <p class="loyalty-info">
+                    Total Tickets: <strong id="totalTickets">0</strong> | 
+                    Total: £<span id="zooTotal">0.00</span> | 
+                    You'll earn <strong id="zooPoints">0</strong> loyalty points!
+                </p>
+
+                <button type="submit" class="standard-button">Book Zoo Tickets</button>
+            </form>
+
+            <p id="zooMessage" class="booking-message"></p>
+        </section>
+
+
+        <!-- HOTEL BOOKING SECTION -->
+        <section class="booking-section">
+            <h2 class="section-title">Book Hotel Stay</h2>
+            
+            <form id="hotelBookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" required>
+                        <option value="">-- Select Room Type --</option>
+                        <option value="Standard">Standard Room - £100.00/night</option>
+                        <option value="Deluxe">Deluxe Room - £150.00/night</option>
+                        <option value="Suite">Suite - £250.00/night</option>
+                        <option value="Family">Family Room - £180.00/night</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkIn">Check-In Date:</label>
+                    <input type="date" id="checkIn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkOut">Check-Out Date:</label>
+                    <input type="date" id="checkOut" required>
+                </div>
+
+                <p class="loyalty-info">Total: £<span id="hotelTotal">0.00</span> | You'll earn <strong id="hotelPoints">0</strong> loyalty points!</p>
+
+                <button type="submit" class="standard-button">Book Hotel Stay</button>
+            </form>
+
+            <p id="hotelMessage" class="booking-message"></p>
+        </section>
+
+
+        <section>
+            <div class="email-cta-section">
+                <h2 class="section-title">Be the first to receive important updates about the park!</h2>
+                <form action="#" method="post" class="email-signup-form">
+                    <input type="email" name="email" placeholder="Enter your email address" required class="cta-email-input">
+                    <button type="submit" class="submit-email-cta-button">Sign Up</button>
+                </form>
+                <p class="email-privacy-note">We respect your privacy. Your email will not be shared.</p>
+            </div>
+        </section>
+
+    </main>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo-section">
+            <a href="index.html">
+            <img src="assets/images/riget-logo.png" alt="Riget Zoo Logo" class="footer-logo">
+            </a>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Zoo</h4>
+                <a href="home.html#what-we-offer-section">Attractions</a>
+                <a href="zoo-showcase.html#events-section">Events</a>
+                <a href="zoo-showcase.html#animals-section">Animals</a>
+                <a href="home.html#reviews-section">Reviews</a>
+            </div>
+            <div class="footer-column">
+                <h4>Educational Visits</h4>
+                <a href="educational-visits.html">Learning Material</a>
+                <a href="educational-visits.html">What's Included</a>
+                <a href="educational-visits.html">Make an enquiry</a>
+                <a href="educational-visits.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Hotel</h4>
+                <a href="hotel-showcase.html">Accommodation Levels</a>
+                <a href="hotel-showcase.html">Check in/out times</a>
+                <a href="hotel-showcase.html">Facilities</a>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <p><strong>Riget Zoo Wildlife Park</strong></p>
+            <p>Evergreen House,</p>
+            <p>Meadow Lane</p>
+            <p>Northwood, Somerset</p>
+            <p>NS3 4AB</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr class="footer-line">
+        <div class="social-icons">
+            <a href="https://youtube.com" target="_blank"><img src="assets/icons/youtube.png" alt="YouTube"></a>
+            <a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="assets/icons/tik-tok.png" alt="TikTok"></a>
+            <a href="https://instagram.com" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+        </div>
+        <p class="copyright">&copy; Copyright. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

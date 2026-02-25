@@ -1,0 +1,2062 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lexend', sans-serif;
+    font-size: clamp(15px, 1.2vw, 18px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* -------------- Resuable css --------------*/
+
+/* section-title-css */
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #497435;
+}
+ 
+
+/*  standard-showcase-section-css  */
+
+.showcase-section {
+    background-color: #e9dda9ff;
+    width: 80%;
+    padding: 1rem 0 4rem 0; /* top right bottom left */
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.showcase-section-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+
+
+.showcase-section-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.showcase-section-card:hover {
+    transform: scale(1.02);
+}
+
+.showcase-section-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+
+.showcase-card-caption { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    color: #e9dda9ff; 
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+/*  standard-showcase-section-css  */
+
+/*  double caption showcase  */
+
+.double-caption-showcase-section {
+    background-color: #e9dda9ff;
+    width: 80%;
+    padding: 1rem 0 2rem 0; /* top right bottom left */
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.double-caption-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+
+
+.double-caption-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.double-caption-card:hover {
+    transform: scale(1.02);
+}
+
+.double-caption-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+
+.double-caption-card-text { 
+    position: absolute;
+    inset: 0;
+}
+
+.double-caption-card-text h3{ 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    color: #e9dda9ff; 
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 0; 
+}
+
+.double-caption-card-text p{ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    color: #e9dda9ff; 
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: 0; 
+}
+
+/*  Double caption showcase  */
+
+/* standard-button-css  */
+
+.standard-button {
+    /* positioning of button */
+    margin-top: 1.5rem;
+    padding: 0.8em 1.5em;
+    display: inline-block;
+    cursor: pointer; 
+    
+    /* background styles */
+    background-color: #497435;
+    color: #e9dda9ff;
+    border: 2px solid #679748ff;
+    border-radius: 12px;
+    
+    /* text effects */
+    font-family: 'Lexend', sans-serif; 
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    
+    /* Animation */
+    transition: all 0.3s ease-in-out;
+}
+
+.standard-button:hover {
+    background-color: #ebcd72ff;
+    color: #497435;
+    transform: scale(1.1);
+}
+
+/* removes default border on buttons */
+.standard-button:focus {
+    outline: none;
+}
+
+/* standard-button-css  */
+
+/* standard-button-inverse-css  */
+
+.standard-button-inverse {
+    /* positioning of button */
+    margin-top: 1.5rem;
+    padding: 0.8em 1.5em;
+    display: inline-block;
+    cursor: pointer; 
+    
+    /* background styles */
+    background-color: #e9dda9ff;
+    color: #497435;
+    border: 2px solid #497435;
+    border-radius: 12px;
+    
+    /* text effects */
+    font-family: 'Lexend', sans-serif; 
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    
+    /* Animation */
+    transition: all 0.3s ease-in-out;
+}
+
+.standard-button-inverse:hover {
+    background-color: #497435;
+    color: #e9dda9ff;
+    transform: scale(1.1);
+}
+/* removes default border on buttons */
+.standard-button-inverse:focus {
+    outline: none;
+}
+
+/* standard-button-inverse-css  */
+
+
+/* -------------- Resuable css --------------*/
+
+
+
+/* -------------- Header / Navigation Bar -------------- */
+
+
+header {
+    background-color: #e9dda9ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem 4vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header-logo {
+    height: 6.5rem;
+    width: auto;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.header-logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+nav a,
+.book-now a {
+    padding: 0.6em 1.1em;
+    font-weight: 600;
+}
+
+
+nav { 
+    /* Positioning */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 3%;
+}
+
+nav a {
+    /* Styling */
+    padding: 0.6em 1.1em;
+    background-color: #679748ff;
+    border-radius: 12px;
+    border: 2px solid #497435;
+    /* Text styling */
+    text-decoration: none;
+    color: #ebcd72;
+    font-weight: 600;
+    white-space: nowrap;
+    /* Font size */
+    font-size: 1.1em;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #ebcd72;
+    color: #497435;
+    transform: scale(1.1);
+}
+
+
+.book-now a {
+    display: inline-block;
+    /* Styling */
+    background-color: #497435;
+    border-radius: 12px;
+    border: 2px solid #679748ff;
+    /* Text styling */
+    color: #ebcd72;
+    text-decoration: none;
+    font-size: 1.35em;
+    /* Size of box */
+    padding: 0.9em 1.1em;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.book-now a:hover {
+    background-color: #ebcd72;
+    color: #497435;
+    transform: scale(1.1);
+}
+
+.header-icon {
+    margin-left: 0.5rem;
+}
+
+.accessability-icon-image, .profile-icon-image {
+    align-items: center;
+    flex-direction: row;
+    height: 3.5rem;
+    width: auto;
+    cursor: pointer;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.accessability-icon-image:hover, .profile-icon-image:hover {
+    transform: scale(1.1);
+}
+
+/* Header Responsive Design */
+
+@media (min-width: 1380px) {
+    .header-right {
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .header-right {
+        width: 100%;              
+        justify-content: center;  
+        margin-left: 0;           
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header-right {
+        margin-left: 0;             
+        justify-content: center;     
+        width: 100%;                 
+    }
+
+    .book-now {
+        margin: 0; /* remove the side offset */
+    }
+}
+
+/* -------------- Header / Navigation Bar -------------- */
+
+/* -------------- Footer -------------- */
+
+footer {
+    background-color: #e9dda9ff;
+    color: #497435;
+    padding: 3rem 4vw 1rem 4vw;
+    font-family: 'Lexend', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Section */
+.footer-logo-section {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-logo {
+    height: 135px;
+    width: auto;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/* Nav Columns */
+.footer-columns {
+    display: flex;
+    flex: 3;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    text-transform: none;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #497435;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+}
+
+/* Address Section */
+.footer-address {
+    flex: 1;
+    border-left: 2px solid #497435;
+    padding-left: 2rem;
+    min-width: 200px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Bottom Area */
+.footer-line {
+    border: 0;
+    border-top: 2px solid #497435;
+    margin: 2rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons img {
+    height: 40px;
+    width: auto;
+    /* Makes black icons match text colour */
+    filter: brightness(0) saturate(100%) invert(38%) sepia(59%) saturate(415%) hue-rotate(53deg) brightness(91%) contrast(88%);
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* footer mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-address {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid #497435;
+        padding-top: 1.5rem;
+    }
+}
+
+/* -------------- Footer -------------- */
+
+
+
+/* Home | Body */
+
+/* Hero Section */
+
+* {box-sizing: border-box;}
+
+/* Slideshow container */
+.hero-slideshow-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.hero-slides img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/* Hide the images by default */
+.hero-slides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* position next button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover of arrows add a black background  */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* --- hero floating caption card --- */
+
+.hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+/* --- Slide-Specific Positioning --- */
+
+/* Slide 1: Middle-Right */
+.hero-slides:nth-child(1) .hero-caption {
+    right: 8%;
+    left: auto;
+    text-align: right;
+    border-right: 8px solid #497435;
+}
+
+/* Slide 2: Bottom-Left */
+.hero-slides:nth-child(2) .hero-caption {
+    left: 4%;
+    top: 80%;
+    right: auto;
+    text-align: left;
+    border-left: 8px solid #497435;
+}
+
+/* Slide 3: Bottom-Left */
+.hero-slides:nth-child(3) .hero-caption {
+    left: 4%;
+    top: 80%;
+    right: auto;
+    text-align: left;
+    border-left: 8px solid #497435;
+}
+
+/* --- responsive mobile layout  --- */
+@media (max-width: 768px) {
+    .hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: 7.5% !important;
+        text-align: center !important;
+        
+        /* reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+    /* makes Slide 1 caption card go to bottom on mobile */
+    .hero-slides:nth-child(1) .hero-caption {
+        top: 80% !important;
+        right: auto !important; /* clears alignment from larger version */
+    }
+}
+
+
+/* Number text (1/3 etc) */
+.hero-numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots */
+.hero-slide-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Frequently Used Links Section */
+
+.frequently-used-links-section {
+    background-color: #e9dda9ff;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.frequently-used-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.frequently-used-links a {
+    background-color: #eeeeee;
+    border: 4px solid black;
+    /* stops overlapping borders but removes right border of furthest right element*/
+    color: #497435;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.8em 1.2em;
+    white-space: nowrap;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+
+.frequently-used-links a:hover {
+    background-color: #a3a3a3;
+    transform: scale(1.1);
+}
+
+
+
+
+/* ------------ Animal Carousel section ------------ */
+
+.home-page-carousel {
+  position: relative;
+  height: 600px;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr repeat(5, 30px) 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Carousel container */
+.home-page-carousel .carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+
+  pointer-events: none;
+}
+
+/* Carousel items */
+.home-page-carousel .item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+
+  transition: transform 0.25s linear;
+
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+
+  transform:
+    rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-320px * var(--r)))
+    scale(calc(1 - (0.1 * var(--abs))));
+
+  z-index: calc((var(--position) - var(--abs)));
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Images */
+.home-page-carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Item offsets */
+.home-page-carousel .item:nth-of-type(1) { --offset: 1; }
+.home-page-carousel .item:nth-of-type(2) { --offset: 2; }
+.home-page-carousel .item:nth-of-type(3) { --offset: 3; }
+.home-page-carousel .item:nth-of-type(4) { --offset: 4; }
+.home-page-carousel .item:nth-of-type(5) { --offset: 5; }
+
+/* Radios (hidden but functional) */
+.home-page-carousel input {
+  display: none;
+}
+
+/* Radio → carousel position mapping */
+#pos1:checked ~ .carousel { --position: 1; }
+#pos2:checked ~ .carousel { --position: 2; }
+#pos3:checked ~ .carousel { --position: 3; }
+#pos4:checked ~ .carousel { --position: 4; }
+#pos5:checked ~ .carousel { --position: 5; }
+
+/*  Arrows  */
+
+.home-page-carousel .arrow {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 20;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.home-page-carousel .arrow::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* Left arrow */
+.home-page-carousel .arrow.left {
+    left: 30px;
+}
+
+.home-page-carousel .arrow.left::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Right arrow */
+.home-page-carousel .arrow.right {
+    right: 30px;
+}
+
+.home-page-carousel .arrow.right::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Show correct arrows per position */
+#pos1:checked ~ .arrow.left[for="pos5"],
+#pos1:checked ~ .arrow.right[for="pos2"],
+#pos2:checked ~ .arrow.left[for="pos1"],
+#pos2:checked ~ .arrow.right[for="pos3"],
+#pos3:checked ~ .arrow.left[for="pos2"],
+#pos3:checked ~ .arrow.right[for="pos4"],
+#pos4:checked ~ .arrow.left[for="pos3"],
+#pos4:checked ~ .arrow.right[for="pos5"],
+#pos5:checked ~ .arrow.left[for="pos4"],
+#pos5:checked ~ .arrow.right[for="pos1"] {
+display: block;
+}
+
+/* ------------ Animal Carousel section ------------ */
+
+
+
+/* ------------ Reviews Section ------------ */
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+}
+
+.card {
+  width: 220px;
+  background: #f2f2f2;
+  border: 1px solid #b0b0b0;
+  border-radius: 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stars {
+  margin-left: auto;
+  font-size: 17px;
+  color: #cfa70a;
+}
+
+h3 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #4a4a4a;
+}
+
+
+/* ------------ Reviews Section ------------ */
+
+
+
+
+/* ------------ Email cta section ------------ */
+.email-cta-section {
+    background-color: #c5c0beff;
+    width: 100%;
+    padding: 2rem 4vw;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.email-signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem
+}
+
+.cta-email-input {
+    background-color: #ebcd72ff;
+    padding: 0.8rem 1rem;
+    width: 30vw;
+    max-width: 80%;
+
+    border: 2px solid #497435;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    font-family: 'Lexend', sans-serif;
+    color: #497435;
+}
+
+.cta-email-input::placeholder {
+    color: #497435;
+    opacity: 0.7;
+    font-size: 1.35rem;
+}
+.submit-email-cta-button {
+    background-color: #497435;
+    color: #e9dda9ff;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    /* Smooth animations */
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-email-cta-button:hover {
+    background-color: rgb(55, 80, 38);
+    transform: scale(1.05);
+}
+
+/* -------- Email cta section -------- */
+
+/* ------------ Home Page ------------ */
+
+/* ------------ Zoo Page ------------ */
+
+/* Hero Section */
+
+.zoo-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.zoo-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.zoo-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.zoo-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.zoo-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .zoo-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+/* Plan your visit sectino */
+
+.plan-visit-section {
+    background-color: #e9dda9; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 50px; 
+    text-align: center;
+}
+
+.plan-visit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* mobile stacking */
+    margin-top: 1.5rem;
+}
+
+.plan-visit-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.plan-visit-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px; 
+}
+
+.plan-visit-info-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #679748; 
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #497435;
+}
+
+.plan-visit-info-box h3 {
+    color: #fdfaf0;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.plan-visit-info-box p {
+    color: #fdfaf0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+
+/* mobile respondiveness */
+@media (max-width: 768px) {
+    .plan-visit-section {
+        border-radius: 25px;
+        width: 95%;
+    }
+    
+    .plan-visit-info-box h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Plan your visit section */
+
+/* ready to visit section */
+
+.ready-to-visit-section {
+    width: 100%;
+    padding: 2rem 4vw;
+    margin-top: 3rem;
+}
+
+.ready-to-visit-container {
+    background-color: #e9dda9ff; 
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 60px; 
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ready-to-visit-container h2 {
+    margin-bottom: 0.5rem;
+    color: #497435; 
+}
+
+.ready-to-visit-container p {
+    color: #497435;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+    .ready-to-visit-container {
+        border-radius: 30px;
+        padding: 2rem 1rem;
+    }
+}
+
+/* ready to visit section */
+
+
+
+/* ------------ Zoo Page ------------ */
+
+/* ------------ Hotel Page ------------ */
+
+
+/* Hero Section */
+
+.hotel-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.hotel-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.hotel-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.hotel-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.hotel-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .hotel-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+
+
+
+
+
+/* ------------ Hotel Page ------------ */
+
+/* ------------ Educational Visits Page ------------ */
+
+/* Hero Section */
+
+.educational-visits-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.educational-visits-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.educational-visits-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.educational-visits-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.educational-visits-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .educational-visits-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* ------------ Educational Visits Page ------------ */
+
+
+/* ------------ Visitor Information Page ------------ */
+
+/* Hero Section */
+
+.visitor-information-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.visitor-information-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.visitor-information-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.visitor-information-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.visitor-information-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .visitor-information-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* ------------ Visitor Infomation Page ------------ */
+
+
+/* ------------ Contact Page ------------ */
+
+/* Hero Section */
+
+.contact-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.contact-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.contact-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.contact-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.contact-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .contact-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* Contact form */
+
+       .contact-section {
+            max-width: 400px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .section-title {
+            margin: 0;
+            color: #497435;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .standard-input {
+            background-color: #ebcd72ff;
+            padding: 0.8rem 1rem;
+            width: 80%;
+
+            border: 2px solid #497435;
+            border-radius: 8px;
+
+            font-size: 1rem;
+            font-family: 'Lexend', sans-serif;
+            color: #497435;
+        }
+
+        .standard-input::placeholder {
+            color: #6a9e50;
+        }
+
+        .message-input {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+
+
+/* Contact form */
+
+
+/* ------------ Contact Page ------------ */
+
+
+/* ------------ Book now page ------------ */
+
+/* Hero Section */
+
+.booking-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.booking-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.booking-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 12%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 220px;
+    max-width: 450px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.booking-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.booking-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .booking-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* Booking forms */
+
+/* Booking Forms Styling */
+.booking-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.loyalty-info {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #4CAF50;
+    font-size: 0.95rem;
+}
+
+.booking-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.booking-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.booking-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* User Info Display */
+.user-info-section {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.user-info-box {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-info-box p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.user-info-box strong {
+    color: #4CAF50;
+}
+
+@media (max-width: 600px) {
+    .user-info-box {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Ticket Selection Grid */
+.ticket-selection-grid {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.ticket-selection-grid h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.ticket-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.ticket-row label {
+    font-weight: 500;
+    flex: 1;
+}
+
+.ticket-quantity {
+    width: 80px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+}
+
+.ticket-quantity:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Remove spinner arrows from number inputs (optional) */
+.ticket-quantity::-webkit-outer-spin-button,
+.ticket-quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* ------------ Book Now Page ------------ */
+
+
+
+/* ------------ Accessibility Page ------------ */
+
+/* Hero Section */
+
+.accessibility-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.accessibility-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.accessibility-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 12%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.accessibility-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.accessibility-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .accessibility-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* ------------ Accessibility Page ------------ */
+
+
+/* ------------ Profile Page ------------ */
+
+/* Hero Section */
+
+.profile-page-hero-image-container {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+
+}
+
+.profile-page-hero-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.profile-page-hero-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 8%;
+    text-align: left;
+    border-right: 8px solid #497435;
+
+    width: 25%; 
+    min-width: 320px;
+    max-width: 600px; 
+    height: fit-content;
+    padding: clamp(1.2rem, 2.5vw, 2.5rem); 
+    
+    /* Aesthetics */
+    background-color: #fdfaf0;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); 
+    border-radius: 15px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.profile-page-hero-caption h1 {
+    color: #497435; 
+    font-size: clamp(1.4rem, 2.8vw, 2.5rem); 
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+}
+
+.profile-page-hero-caption p {
+    color: #333;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .profile-page-hero-caption {
+        width: 85% !important;
+        left: 7.5% !important; 
+        right: auto !important;
+        top: 80% !important; /* Moves it toward the bottom on mobile */
+        text-align: center !important;
+        
+        /* Reset side borders and add a top border instead */
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 5px solid #497435 !important;
+    }
+}
+
+/* Hero Section */
+
+
+/* ------------ Profile Page ------------ */
+
+
+/* ------------ Login / Signup Page ------------ */
+
+.hidden {
+    display: none !important;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #0077cc;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.auth-section {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.standard-input { 
+    background-color: #ebcd72ff;
+    padding: 0.8rem 1rem;
+    width: 80%;
+
+    border: 2px solid #497435;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    font-family: 'Lexend', sans-serif;
+    color: #497435;
+}
+
+.standard-input::placeholder {
+    color: #497435;
+    opacity: 0.7;
+    font-size: 1.35rem;
+}
+
+
+#registerForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* makes the referenced inputs span two columns */
+.email-input,
+.password-input,
+.password-confirmation-input,
+.dob-input,
+#registerForm .standard-button {
+    grid-column: span 2;
+}
+
+.grid-standard-inputs { 
+    background-color: #ebcd72ff;
+    padding: 0.8rem 1rem;
+    width: 100%;
+
+    border: 2px solid #497435;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    font-family: 'Lexend', sans-serif;
+    color: #497435;
+}
+
+.grid-standard-inputs::placeholder {
+    color: #497435;
+    opacity: 0.7;
+    font-size: 1.35rem;
+}
+
+
+
+.auth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+/* ------------ Login / Signup Page ------------ */
